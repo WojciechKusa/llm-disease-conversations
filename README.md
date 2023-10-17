@@ -1,40 +1,35 @@
-llm_disease_conversations
+LLM disease conversations
 ==============================
 
-A short description of the project.
+<img alt="Evaluation results" src="reports/evaluations_GPT-4.pdf" width="450" height="300" />
 
-Project Organization
-------------
+## Installation
 
-    ├── LICENSE
-    ├── README.md                               <- The top-level README for developers using this project.
-    ├── data
-    │   ├── processed                           <- The final, canonical data sets for modeling.
-    │   └── raw                                 <- The original, immutable data dump.
-    │
-    ├── docs                                    <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models                                  <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks                               <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                                              the creator's initials, and a short `-` delimited description, e.g.
-    │                                              `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references                              <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports                                 <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │
-    ├── requirements.txt                        <- The requirements file for reproducing the analysis environment, e.g.
-    │                                              generated with `pip freeze > requirements.txt`
-    │
-    ├── llm_disease_conversations           <- Source code for use in this project.
-    │   │
-    │   ├── data                                <- Scripts to download or generate data
-    │   │
-    │   ├── utils                                <- Scripts utilities used during data generation or training
-    │   │
-    │   ├── training                            <- Scripts to train models
-    │   │
-    │   ├── validate                            <- Scripts to validate models
-    │   │
-    │   └── visualization                       <- Scripts to create exploratory and results oriented visualizations
+Create a virtual environment and install the requirements:
+
+```zsh
+$ conda create -n llm-disease-conversations python=3.8
+$ conda activate llm-disease-conversations
+(llm-disease-conversations)$ pip install -r requirements.txt
+```
+
+Set OpenAI API Key:
+Ensure you have an OpenAI API Key. Add your organization and API key as environment variables:
+
+```python
+import os
+import openai
+
+openai.organization = os.environ['OPENAI_ORGANIZATION']
+openai.api_key = os.environ['OPENAI_KEY']
+```
+
+## Running the experiment
+
+The code is in the notebook: [`notebooks/NLPMC2023-Clinical-Conversation.ipynb`](notebooks%2FNLPMC2023-Clinical-Conversation.ipynb).
+
+## Data
+
+Generated data is stored in the `data/processed` directory.
+Manual evaluations are in the `data/NLPMC-prompt-evaluation.csv` file.
+
