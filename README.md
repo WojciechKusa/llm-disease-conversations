@@ -1,7 +1,8 @@
 LLM disease conversations
 ==============================
 
-<img alt="Evaluation results" src="reports/evaluations_GPT-4.pdf" width="450" height="300" />
+This repository evaluates the consistency of large language models (LLMs) in delivering medical advice, emphasizing their sensitivity to diverse user inputs and beliefs. 
+Our analysis uncovers inconsistencies in diagnoses, highlighting the models' variable responses to different symptom descriptions and pre-existing user assumptions.
 
 ## Installation
 
