@@ -32,5 +32,5 @@ The code is in the notebook: [`notebooks/NLPMC2023-Clinical-Conversation.ipynb`]
 ## Data
 
 Generated data is stored in the `data/processed` directory.
-Manual evaluations are in the `data/NLPMC-prompt-evaluation.csv` file.
+Manual evaluations are in the `data/manual-prompt-evaluation.csv` file.
 
